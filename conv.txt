@@ -1,0 +1,14 @@
+<optgroup label="Temperature">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+          </optgroup>
+          <hr>
+          <optgroup label="Wind Speed">
+            <option value="kmh">km/h</option>
+            <option value="mph">mp/h</option>
+          </optgroup>
+          <hr>
+          <optgroup label="Precipitation">
+            <option value="mm">Millimetres (mm)</option>
+            <option value="inch">Inches (inch)</option>
+          </optgroup>

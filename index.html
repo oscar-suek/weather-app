@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css">
+  <title>Frontend Mentor | Weather app</title>
+</head>
+<body>
+  <div id="main-div">
+    <div id="top-div">
+      <div>
+        <img src="./assets/images/logo.svg" alt="logo" >
+      </div>
+      <div id="unit-div">
+        <div id="s-div">
+          <img src="./assets/images/icon-units.svg" alt="units">
+        </div>
+        <select name="units" id="units">
+          <option value="metric">Metric</option>
+          <option value="imperial">Imperial</option> 
+        </select>
+      </div>
+    </div>
+    <div id="content-div">
+      <p id="d1">How's the sky looking today?</p>
+      <div id="father-div">
+        <div id="search-div">
+          <div id="s1-div">
+            <img src="./assets/images/icon-search.svg" alt="search" width="15px" height="15px">
+          </div>
+          <input type="search" name="p-search" id="p-search" placeholder="Search for a place..." autocomplete="off">
+        </div>
+        <button id="b1">Search</button>
+      </div>
+      <div id="search-loading" class="search-loading hidden">
+        <span class="loader"></span>
+        <span>Search in progress</span>
+      </div>
+    </div>
+    <p id="no-search">No search result found!</p>
+  </div><br><br>
+  <script src="./script.js"></script>
+</body>
+</html>
