@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(jsonData => {
         data = jsonData
-        console.log(data)
         showPlace()
         addImages()
         searchCountry()
@@ -238,7 +237,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
         mainImg = document.querySelector('#main-img')
-        console.log(mainImg)
         const imAlt = mainImg.alt
         if (imAlt == "0") mainImg.src = "./assets/images/icon-sunny.webp";
         else if (imAlt <= 2) mainImg.src = "./assets/images/icon-partly-cloudy.webp";
@@ -276,7 +274,6 @@ document.addEventListener('DOMContentLoaded', function() {
             fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${searchInput.value}&count=1&language=en&format=json`)
             .then(res => res.json())
             .then(results => {
-                console.log(results)
                 if(!results.results){
                     document.querySelector('#compass-div').style.display = 'none'
                     document.querySelector('#no-search').style.display = 'block'
@@ -302,7 +299,6 @@ document.addEventListener('DOMContentLoaded', function() {
             fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${currentLoc.textContent}&count=1&language=en&format=json`)
             .then(res => res.json())
             .then(results => {
-                console.log(currentLoc.textContent)
                 showSearchedCountryData(results.results[0].longitude, results.results[0].latitude, searchUnit.value, results.results[0].name)
             })
             .finally(() => {
@@ -554,6 +550,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 })
+
 
 
 
